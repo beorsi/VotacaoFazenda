@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votação 2026</title>
+    <link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-md site-navbar border-bottom border-3" aria-label="Navegação principal">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2 me-auto" href="index.html">
+                <img class="img-fluid" src="img/logo-fazenda.jpg" alt="Logo da Fazenda" width="54" height="40">
+                <span>Votação 2026</span>
+            </a>
+            <button class="navbar-toggler rounded-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarLinks"
+                aria-controls="navbarLinks" aria-expanded="false" aria-label="Abrir menu de navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse flex-grow-0" id="navbarLinks">
+                <ul class="navbar-nav gap-md-1">
+                    <li class="nav-item rounded">
+                        <a class="nav-link rounded-2 active" href="index.html" aria-current="page">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link rounded-2" href="votacao.html">Votar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link rounded-2" href="resultado.html">Resultado</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container flex-grow-1 py-4 py-lg-5">
+        <section class="row align-items-center justify-content-center g-4 g-lg-5" aria-labelledby="welcome-title">
+            <div class="col-10 col-sm-8 col-md-5 col-lg-4 text-center">
+                <img class="img-fluid w-100 rounded-circle border border-5 border-farm-wood object-fit-cover"
+                    src="img/fazendeiro.jpg" alt="Fazendeiro João Paulo">
+                <p class="font-ranch bg-warning rounded-2 d-inline-block mt-2 mb-0 px-3 py-1 text-farm-wood">
+                    Fazendeiro João Paulo
+                </p>
+            </div>
+            <div class="col-12 col-md-7 col-lg-6">
+                <div class="card bg-parchment border-0 rounded-4 shadow">
+                    <div class="card-body p-4 p-lg-5">
+                    <h1 class="h2 mb-3" id="welcome-title">Ô de casa! Aqui quem manda é o fazendeiro.</h1>
+                    <p class="mb-3">Três peões foram parar na roça esta semana. Só um volta pra casa, e quem decide é você. Pode votar quantas vezes quiser.</p>
+                    <div class="d-flex flex-wrap gap-2">
+                        <a class="btn btn-farm-red fw-bold" href="votacao.html">Votar agora</a>
+                        <a class="btn btn-dark fw-bold" href="resultado.html">Ver parcial</a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-4 mt-lg-5" aria-labelledby="contestants-title">
+            <h2 class="h4 text-farm-gold mb-3" id="contestants-title">Na roça desta semana</h2>
+            <div class="row g-2 align-items-center" id="home-contestants-list">
+                <div class="col-12"><p class="text-light" role="status">Carregando participantes...</p></div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="container-fluid border-top border-dark border-2 py-3 text-center site-footer">
+        <small>DIW 2026, PUC Minas</small>
+    </footer>
+    <script src="lib/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="js/api.js"></script>
+</body>
+
+</html>

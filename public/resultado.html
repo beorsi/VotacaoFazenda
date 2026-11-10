@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votação 2026</title>
+    <link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md site-navbar border-bottom border-3" aria-label="Navegação principal">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2 me-auto" href="index.html">
+                <img class="img-fluid" src="img/logo-fazenda.jpg" alt="Logo da Fazenda" width="54" height="40">
+                <span>Votação 2026</span>
+            </a>
+            <button class="navbar-toggler rounded-2" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarLinks" aria-controls="navbarLinks" aria-expanded="false"
+                aria-label="Abrir menu de navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse flex-grow-0" id="navbarLinks">
+                <ul class="navbar-nav gap-md-1">
+                    <li class="nav-item"><a class="nav-link rounded-2" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link rounded-2" href="votacao.html">Votar</a></li>
+                    <li class="nav-item"><a class="nav-link rounded-2 active" href="resultado.html"
+                            aria-current="page">Resultado</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="container py-4 py-lg-5">
+        <div class="row justify-content-center">
+            <section class="col-12 col-lg-10" aria-labelledby="results-title">
+                <h1 class="h2 text-farm-gold mb-1" id="results-title">Parcial da eliminação</h1>
+                <p class="small text-light mb-3">
+                    <span class="fs-4 fw-bold" id="total-votes">0</span>
+                    <span>votos computados</span>
+                </p>
+                <div class="row g-3" id="results-list">
+                    <div class="col-12">
+                        <p class="text-light" role="status">Carregando resultado...</p>
+                    </div>
+                </div>
+                <button class="btn btn-outline-light btn-sm mt-3" id="open-reset-modal" type="button"
+                    data-bs-toggle="modal" data-bs-target="#resetVotesModal" hidden>Zerar votação</button>
+                <div id="results-message" class="mt-4" aria-live="polite"></div>
+            </section>
+        </div>
+    </main>
+    <div class="modal fade" id="resetVotesModal" tabindex="-1" aria-labelledby="resetVotesModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-parchment">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5 text-farm-wood" id="resetVotesModalLabel">Zerar votação?</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body text-farm-wood">
+                    Esta ação apaga todos os votos registrados e não pode ser desfeita. Deseja continuar?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-danger fw-bold" id="confirm-reset-votes">Sim, zerar
+                        votação</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="container-fluid border-top border-dark border-2 py-3 text-center site-footer">
+        <small>DIAW 2026, PUC Minas</small>
+    </footer>
+    <script src="lib/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="js/api.js"></script>
+</body>
+
+</html>

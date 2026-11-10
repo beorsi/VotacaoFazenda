@@ -1,0 +1,118 @@
+@font-face {
+    font-family: "Nunito";
+    src: url("../fonts/nunito-400.woff2") format("woff2");
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Nunito";
+    src: url("../fonts/nunito-700.woff2") format("woff2");
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Rye";
+    src: url("../fonts/rye.woff2") format("woff2");
+    font-weight: 400;
+    font-display: swap;
+}
+
+:root {
+    --fazenda-madeira: #3b2415;
+    --fazenda-madeira-clara: #704523;
+    --fazenda-dourado: #f5cb67;
+    --fazenda-creme: #f5e6c3;
+    --fazenda-texto: #281b13;
+    --fazenda-vermelho: #bd352c;
+}
+
+body {
+    color: var(--fazenda-texto);
+    font-family: "Nunito", sans-serif;
+    background-color: var(--fazenda-madeira);
+    background-image:
+        repeating-linear-gradient(0deg, transparent 0, transparent 86px, rgb(20 10 5 / 42%) 87px, rgb(20 10 5 / 42%) 89px),
+        linear-gradient(90deg, #432a19, #54341e 48%, #402616);
+}
+
+h1,h2,h3,.font-ranch {
+    font-family: "Rye", Georgia, serif;
+}
+
+.site-navbar {
+    background-color: var(--fazenda-madeira);
+    border-bottom-color: var(--fazenda-madeira-clara) !important;
+}
+
+.site-navbar .navbar-brand,
+.site-navbar .navbar-brand:hover {
+    color: var(--fazenda-dourado);
+    font-family: "Rye", Georgia, serif;
+}
+
+.site-navbar .nav-link {
+    color: #c9b9a7;
+}
+
+.site-navbar .nav-link:hover,
+.site-navbar .nav-link:focus-visible {
+    color: #fff3d4;
+}
+
+.site-navbar .nav-link.active {
+    background-color: var(--fazenda-dourado);
+    color: var(--fazenda-madeira);
+}
+
+.site-navbar .navbar-toggler {
+    border-color: var(--fazenda-dourado);
+}
+
+.site-navbar .navbar-toggler-icon {
+    filter: brightness(0) invert(1);
+}
+
+.text-farm-gold {
+    color: var(--fazenda-dourado);
+}
+
+.bg-parchment {
+    background-color: var(--fazenda-creme);
+}
+
+.text-farm-wood {
+    color: var(--fazenda-madeira);
+}
+
+.bg-farm-wood {
+    background-color: var(--fazenda-madeira-clara);
+}
+
+.border-farm-wood {
+    border-color: var(--fazenda-madeira-clara) !important;
+}
+
+.contestant-chip {
+    background-color: var(--fazenda-madeira);
+    border-color: var(--fazenda-vermelho) !important;
+    color: var(--fazenda-creme);
+}
+
+.btn-farm-red {
+    background-color: var(--fazenda-vermelho);
+    border-color: var(--fazenda-vermelho);
+    color: #fff;
+}
+
+.btn-farm-red:hover,
+.btn-farm-red:focus-visible {
+    background-color: #9f2b24;
+    border-color: #9f2b24;
+    color: #fff;
+}
+
+.site-footer {
+    color: #c9b9a7;
+}

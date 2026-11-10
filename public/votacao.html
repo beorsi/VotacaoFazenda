@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votação 2026</title>
+    <link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-md site-navbar border-bottom border-3" aria-label="Navegação principal">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2 me-auto" href="index.html">
+                <img class="img-fluid" src="img/logo-fazenda.jpg" alt="Logo da Fazenda" width="54" height="40">
+                <span>Votação 2026</span>
+            </a>
+            <button class="navbar-toggler rounded-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarLinks"
+                aria-controls="navbarLinks" aria-expanded="false" aria-label="Abrir menu de navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse flex-grow-0" id="navbarLinks">
+                <ul class="navbar-nav gap-md-1">
+                    <li class="nav-item"><a class="nav-link rounded-2" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link rounded-2 active" href="votacao.html" aria-current="page">Votar</a></li>
+                    <li class="nav-item"><a class="nav-link rounded-2" href="resultado.html">Resultado</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="container py-4 py-lg-5">
+        <div class="row justify-content-center">
+            <section class="col-12 col-lg-10" aria-labelledby="vote-title">
+                <h1 class="h2 text-farm-gold mb-1" id="vote-title">Quem você quer eliminar?</h1>
+                <p class="text-light mb-3">Cada clique conta um voto para tirar o peão da fazenda.</p>
+                <div id="vote-message" class="mb-3" aria-live="polite"></div>
+                <div class="row row-cols-1 row-cols-md-3 g-3" id="contestants-list">
+                    <div class="col-12"><p class="text-light" role="status">Carregando participantes...</p></div>
+                </div>
+                <section class="mt-4" aria-labelledby="others-title">
+                    <h2 class="h4 text-farm-gold mb-1" id="others-title">Demais peões</h2>
+                    <p class="small text-light mb-3">Fora da roça desta semana, não podem receber votos.</p>
+                    <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 g-3" id="other-contestants-list">
+                        <div class="col-12"><p class="small text-light" role="status">Carregando participantes...</p></div>
+                    </div>
+                </section>
+            </section>
+        </div>
+    </main>
+    <footer class="container-fluid border-top border-dark border-2 py-3 text-center site-footer">
+        <small>DIAW 2026, PUC Minas</small>
+    </footer>
+    <script src="lib/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="js/api.js"></script>
+</body>
+</html>
